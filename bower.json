@@ -1,0 +1,24 @@
+{
+  "name": "DartGulp",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": ["Guillaume Massé"],
+  "description": "Angular Dart gulp seed",
+  "dependencies": {
+
+  },
+  "keywords": [
+    "gulp",
+    "angular",
+    "dart"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
