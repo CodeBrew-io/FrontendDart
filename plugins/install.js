@@ -1,16 +1,8 @@
-var spawn = require("gulp-spawn"),
-	spawn2 = require('child_process').spawn,
+var spawn = require('child_process').spawn,
 	gutil = require('gulp-util');
 
-exports.dart = function(){
-	run("pub", ["get"]);
-}
-exports.bower = function(){
-    run("bower", ["install"]);
-}
-
 function run(command, args){
-    var child = spawn2(command, args, {cwd: process.cwd()});
+    var child = spawn(command, args, {cwd: process.cwd()});
 
     child.stdout.setEncoding('utf8');
     child.stdout.on('data', function (data) {
@@ -27,6 +19,15 @@ function run(command, args){
         gutil.log("Done with exit code", code);
     });
 }
+
+exports.dart = function(){
+	run("pub", ["get"]);
+}
+exports.bower = function(){
+    run("bower", ["install"]);
+}
+
+exports.run = run;
 
 // gulp.task('scripts', function() {
 //     return gulp.src('web/scripts/**/*.js')
