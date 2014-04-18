@@ -1,4 +1,5 @@
 node_modules/
 app/bower_components/
 packages/
-styles/css/
+web/styles/css/main.css
+api/*.pb.dart

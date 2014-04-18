@@ -1,0 +1,23 @@
+package io.codebrew;
+
+message Foo {
+	required int32 foo = 1;
+}
+
+message Bar {
+	required string bar = 1;
+}
+
+message Baz {
+	required string baz = 1;
+}
+
+message OneMessage {
+  enum Type { FOO = 1; BAR = 2; BAZ = 3; }
+
+  required Type type = 1;
+
+  optional Foo foo = 2;
+  optional Bar bar = 3;
+  optional Baz baz = 4;
+}
